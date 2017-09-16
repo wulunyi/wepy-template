@@ -1,0 +1,39 @@
+<style lang="scss">
+</style>
+
+<script>
+  import wepy from 'wepy';
+  import 'wepy-async-function';
+  import 'promise-polyfill'; 
+
+  export default class extends wepy.app {
+    config = {
+      pages: [
+        'pages/index/index',
+        //path
+      ],
+      window: {
+        backgroundTextStyle: 'light',
+        navigationBarBackgroundColor: '#fff',
+        navigationBarTitleText: 'wepy-template',
+        navigationBarTextStyle: 'black'
+      }
+    }
+
+    constructor () {
+      super();
+      this.use('promisify');
+      this.use('requestfix');
+    }
+
+    async onLaunch() {
+      this.demo();
+    }
+
+    async demo() {
+      let res = await wepy.getUserInfo({withCredentials: false});
+
+      console.log(res);
+    }
+  }
+</script>
