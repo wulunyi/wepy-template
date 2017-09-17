@@ -15,3 +15,7 @@
 + com-name 组件名
 #### gulp new --page index
 + index 页面名
+
+## 有用的参考文档
++ [性能优化 onPrefetch](https://segmentfault.com/a/1190000008975448?winzoom=1)
++ [性能优化 预加载](https://wepyjs.github.io/wepy/#/api?id=wepypage-class)
