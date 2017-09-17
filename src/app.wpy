@@ -24,6 +24,22 @@
       super();
       this.use('promisify');
       this.use('requestfix');
+      
+      // 网络请求拦截器
+      // this.intercept('request', {
+      //   config (p) {
+      //     return p;
+      //   },
+      //   success (p) {
+      //     return p;
+      //   },
+      //   fail (p) {
+      //     return p;
+      //   },
+      //   complete (p) {
+      //     return p;
+      //   }
+      // });
     }
 
     async onLaunch() {
